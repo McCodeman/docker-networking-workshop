@@ -1,3 +1,10 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: peira
+
+---
+
 apiVersion: v1
 data:
   .dockerconfigjson: ewogICJhdXRocyI6IHsKICAgICJxdWF5LmlvIjogewogICAgICAiYXV0aCI6ICJkR2xuWlhKaEsyUmxiVzlmY0dWcGNtRTZUVFJXTVRaU1QxTkdWMHN5UkUxWFRGUkpSREJYVFV0S01FdEZURUphVDA1VE9WRkRRakJFVjFSVlFUWTJSemhEU0RrNFRVc3lSRXhXVTBveU5GZEVXQT09IiwKICAgICAgImVtYWlsIjogIiIKICAgIH0KICB9Cn0=

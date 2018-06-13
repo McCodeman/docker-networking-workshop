@@ -17,7 +17,7 @@ type: kubernetes.io/dockerconfigjson
 ---
 
 kind: ClusterRole
-apiVersion: rbac.authorization.k8s.io/v1beta1
+apiVersion: authorization.k8s.io/v1beta1
 metadata:
   name: peira-operator
   namespace: peira
@@ -49,12 +49,12 @@ metadata:
 ---
 
 kind: ClusterRoleBinding
-apiVersion: rbac.authorization.k8s.io/v1beta1
+apiVersion: authorization.k8s.io/v1beta1
 metadata:
   name: peira-operator
   namespace: peira
 roleRef:
-  apiGroup: rbac.authorization.k8s.io
+  apiGroup: authorization.k8s.io
   kind: ClusterRole
   name: peira-operator
 subjects:
@@ -65,7 +65,7 @@ subjects:
 ---
 
 kind: ClusterRole
-apiVersion: rbac.authorization.k8s.io/v1beta1
+apiVersion: authorization.k8s.io/v1beta1
 metadata:
   name: peira-reader
   namespace: peira
@@ -85,12 +85,12 @@ metadata:
 ---
 
 kind: ClusterRoleBinding
-apiVersion: rbac.authorization.k8s.io/v1
+apiVersion: authorization.k8s.io/v1beta1
 metadata:
   name: peira-mock
   namespace: peira
 roleRef:
-  apiGroup: rbac.authorization.k8s.io
+  apiGroup: authorization.k8s.io
   kind: ClusterRole
   name: peira-reader
 subjects:
@@ -109,18 +109,20 @@ metadata:
 ---
 
 kind: ClusterRoleBinding
-apiVersion: rbac.authorization.k8s.io/v1
+apiVersion: authorization.k8s.io/v1beta1
 metadata:
   name: peira-ui
   namespace: peira
 roleRef:
-  apiGroup: rbac.authorization.k8s.io
+  apiGroup: authorization.k8s.io
   kind: ClusterRole
   name: peira-reader
 subjects:
 - kind: ServiceAccount
   name: peira-ui
   namespace: peira
+
+---
 
 kind: Service
 apiVersion: v1

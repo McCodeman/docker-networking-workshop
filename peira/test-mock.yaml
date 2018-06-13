@@ -1,0 +1,12 @@
+apiVersion: peira.tigera.io/v1alpha1
+kind: MockService
+metadata:
+  namespace: peira
+  name: test
+spec:
+  logLevel: debug
+  enableProbe: true
+  listenPort: 8080
+  actions:
+  - kind: reply
+    value: "hello world"
